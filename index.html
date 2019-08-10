@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#">
+        <input type="text" id="txtValue">
+        <button onclick="Find_Word()">Find</button>
+
+
+    </form>
+
+
+    <script>
+        let position = 0;
+        let eng = ["one","two","three","four","five","six"];
+        let vn  = ["mot","hai","ba","bon","nam","sau"];
+        let chose = "three"; 
+        let check = false;
+        for(let i=0; i < eng.length ;i++)
+        {
+            if(chose == eng[i])
+            {
+                check = true;
+                position = i;
+            }
+            else
+            {
+                check = false;
+            }
+        }
+
+        if(check){
+            console.log("Không tìm thấy từ trong từ điển");
+        }
+        else
+        {
+            console.log("Là:" +vn[position] );
+        }
+      
+       
+    
+    
+    </script>
+</body>
+</html>
